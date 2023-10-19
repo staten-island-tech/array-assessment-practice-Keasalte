@@ -84,14 +84,35 @@ const titles = [
   "Little Women",
 ];
 
-//Array of authors and the book they wrote
+/* //1
+books.forEach((authorname)=> console.log(
+  authorname.authorFirst, 
+  authorname.authorLast, 
+  "wrote", 
+  authorname.name,
+  "in", 
+  authorname.publishDate));
+
+//2
+const haha = books.sort((a,b) => a.publishDate - b.publishDate)
+haha.forEach((gettingtitle) => console.log(gettingtitle.name))
+
+//3
+titles.sort(); console.log(titles); */
+
+//4
+const war = books.filter((peace)=> peace.name.includes("War and Peace"
+));
+
+
+//1Array of authors and the book they wrote
 //"--- wrote --- in ---"
 
-//Sort books from oldest to most recent
+//2Sort books from oldest to most recent
 
-//sort books alphabetically
+//3sort books alphabetically
 
-//Find who wrote War and Peace
+//4Find who wrote War and Peace
 
 //how many books were written before 1900?
 
