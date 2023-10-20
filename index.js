@@ -84,7 +84,7 @@ const titles = [
   "Little Women",
 ];
 
-/* //1
+//1
 books.forEach((authorname)=> console.log(
   authorname.authorFirst, 
   authorname.authorLast, 
@@ -98,12 +98,40 @@ const haha = books.sort((a,b) => a.publishDate - b.publishDate)
 haha.forEach((gettingtitle) => console.log(gettingtitle.name))
 
 //3
-titles.sort(); console.log(titles); */
+titles.sort(); console.log(titles); 
 
 //4
-const war = books.filter((peace)=> peace.name.includes("War and Peace"
-));
+const war = books.filter((peace)=> peace.name.includes("War"));
+console.log(war[0].authorFirst, war[0].authorLast);
+ 
+//5
+const before1900 = books.filter((older) => older.publishDate < 1900);
+console.log(before1900.length);
 
+
+//6
+const date = new Date();
+const in100years = books.filter((dateiswithin)=> date.getFullYear() - dateiswithin.publishDate <= 100);
+if (in100years.length >= 1){
+  console.log("yes");
+}
+else {
+  console.log("no");
+}
+
+//7
+const dates = new Date();
+const all100years = books.filter((dateiswithin)=> dates.getFullYear() - dateiswithin.publishDate <= 100);
+if (all100years.length >= 10){
+  console.log("yes");
+}
+else {
+  console.log("no");
+}
+
+//8
+const finallyfree = books.filter((history) => history.genre.includes("historical"));
+console.log(finallyfree);
 
 //1Array of authors and the book they wrote
 //"--- wrote --- in ---"
@@ -114,10 +142,10 @@ const war = books.filter((peace)=> peace.name.includes("War and Peace"
 
 //4Find who wrote War and Peace
 
-//how many books were written before 1900?
+//5how many books were written before 1900?
 
-//was there at least one book published within the last 100 years?
+//6was there at least one book published within the last 100 years?
 
-//was every book published within the last 100 years?
+//7was every book published within the last 100 years?
 
-//print a list of books that "includes" the genre historical
+//8print a list of books that "includes" the genre historical
